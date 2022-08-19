@@ -1,0 +1,2 @@
+class LearningRateFinder:
+    pass
