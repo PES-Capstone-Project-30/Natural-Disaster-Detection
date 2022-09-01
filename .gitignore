@@ -130,3 +130,6 @@ dmypy.json
 
 data
 sample-data
+Test
+model.h5
+/.idea/sonarlint/issuestore/
