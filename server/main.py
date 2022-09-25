@@ -11,7 +11,7 @@ from werkzeug.utils import secure_filename
 
 DEFAULT_PORT = 5000
 TARGET_SIZE = (224, 224)
-MODEL_PATH = "../model/model_resnet.h5"
+MODEL_PATH = "./model/model.h5"
 
 app = Flask(__name__)
 
@@ -53,17 +53,12 @@ def upload():
     f.save(file_path)
 
     prediction = model_predict(file_path, model)
-
-    # Process your result for human
     pred_class = prediction.argmax(axis=-1)  # Simple argmax
-    # pred_class = decode_predictions(prediction, top=1)   # ImageNet Decode
-    # result = str(pred_class[0][0][1])               # Convert to string
-    # return result
-    result = ""
-    for x in prediction:
-        result += str(np.round(x))
 
-    return result + ", Class: " + pred_class
+    print(prediction)
+    print(pred_class)
+
+    return str(pred_class[0])
 
 
 if __name__ == '__main__':

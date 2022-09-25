@@ -9,3 +9,5 @@ K
 server/templates/index.html,4/b/4b8d623faa4a007e50a05a1bef99c253009e46e6
 J
 server/templates/base.html,4/a/4a1673cfc702f6bb6dc02deb84577e4cd97ffb05
+N
+Natural-Disaster-Detection.iml,c/9/c987733ab03bb9bc7dc28ba069e04417235b2b7b
